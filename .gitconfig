@@ -1,0 +1,14 @@
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  ba = branch -a
+  com = checkout master
+[user]
+  name = Geoff Berger
+  email = gberger@zappos.com
+[color]
+  diff = auto
+  status = auto
+  branch = auto
