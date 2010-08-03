@@ -76,16 +76,18 @@ set hlsearch
 " allows full line wrap
 set wrap
 
-"inoremap ( ()<Esc>i
-"oremap [ []<Esc>i
-"noremap { {}<Esc>i
+"inoremap        (  ()<Left>
+"inoremap <expr> )  strpart(getline('.'), col('.')-1, 1) == ")" ? "\<Right>" : ")"
+
+"inoremap {      {}<Left>
+"inoremap {<CR>  {<CR>}<Esc>O
+"inoremap {{     {
+"inoremap {}     {}
+
 inoremap <% <%  %><Esc>i
 autocmd Syntax ruby,erb inoremap < <lt>><Esc>i| inoremap > <c-r>=ClosePair('>')<CR>
 inoremap %> <c-r>=ClosePair('%>')<CR>
-"inoremap ) <c-r>=ClosePair(')')<CR>
-"inoremap ] <c-r>=ClosePair(']')<CR>
-"inoremap } <c-r>=CloseBracket()<CR>
-inoremap " <c-r>=QuoteDelim('"')<CR>
+"inoremap  <c-r>=QuoteDelim('"')<CR>
 "inoremap ' <c-r>=QuoteDelim("'")<CR>
 inoremap #$ <c-r>=DrupalData()<CR>
 

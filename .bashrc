@@ -3,7 +3,7 @@ if [ -n "$PS1" ]; then PS1='\h:\w \u\$ '; fi
 # Make bash check it's window size after a process completes
 shopt -s checkwinsize
 
-source ~/src/git-1.6.0.5/contrib/completion/git-completion.bash
+source ~/scripts/git-completion.bash
 
 ##################################
 # General Aliases
@@ -61,11 +61,9 @@ alias cdbwww='cd /usr/local/share/couchdb/www'
 ##################################
 # Bash Color and Configuration
 ##################################
-CLICOLOR="YES";    
-export CLICOLOR
-LSCOLORS="ExGxFxdxCxDxDxhbadExEx";    
-export LSCOLORS
-#export PS1="\u:\w > "
+export CLICOLOR=1
+export LSCOLORS=gxfxcxdxbxegedabagacad
+export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
 export PS1="\[\e[32;1m\]\u@\h:\w$ \[\e[0m\]"
 
 test -r /sw/bin/init.sh && . /sw/bin/init.sh
