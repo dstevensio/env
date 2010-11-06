@@ -12,6 +12,7 @@ alias l='ls -l'
 alias ll='ls -la'
 alias lll='ls -asl | more'
 alias gvim='/Applications/MacVim.app/Contents/MacOS/Vim -g'
+alias sgvim='sudo /Applications/MacVim.app/Contents/MacOS/Vim -g'
 alias rmsvn='find . -name .svn -print0 | xargs -0 rm -rf'
 alias myipbitch='ipconfig getifaddr en0'
 alias rbash='. ~/.bash_profile'
@@ -37,8 +38,8 @@ alias dpmodules='cd ~/Sites/drupal/sites/all/modules'
 ##################################
 alias mysql=/usr/local/mysql/bin/mysql
 alias mysqladmin=/usr/local/mysql/bin/mysqladmin
-alias mysqlstart="sudo /Library/StartupItems/MySQLCOM/MySQLCOM start"
-alias mysqlstop="sudo /Library/StartupItems/MySQLCOM/MySQLCOM stop"
+alias mysql_start="sudo /Library/StartupItems/MySQLCOM/MySQLCOM start"
+alias mysql_stop="sudo /Library/StartupItems/MySQLCOM/MySQLCOM stop"
 
 ##################################
 # Apache Related
@@ -50,6 +51,15 @@ alias apache_httpd='sudo vi /etc/apache2/httpd.conf'
 alias apache_vhosts='sudo vi /etc/apache2/extra/httpd-vhosts.conf'
 alias elog='tail -f /var/log/apache2/error_log'
 alias logs='~/scripts/apache_logs.sh'
+
+##################################
+# Nginx Related
+##################################
+alias nginx_conf='sudo /Applications/MacVim.app/Contents/MacOS/Vim -g /usr/local/nginx/conf/nginx.conf'
+alias nginx_zappos='sudo /Applications/MacVim.app/Contents/MacOS/Vim -g ~/conf/nginx/sites/zappos.conf'
+alias nginx_6pm='sudo /Applications/MacVim.app/Contents/MacOS/Vim -g ~/conf/nginx/sites/zappos.conf'
+alias nginx_bounce='nginx restart'
+alias nginx_logs='tail -f /usr/local/nginx/logs/error.log'
 
 ##################################
 # CouchDB Related

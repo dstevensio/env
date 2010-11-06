@@ -9,6 +9,7 @@ set incsearch
 set hlsearch
 set wrap
 set gfn=Monaco\ 11
+abbr for() for (var i = 0; i < len; i++) {<CR>}<Esc>O<Space><Space>
 
 " tab related
 map <C-t> :tabnew<CR>
@@ -33,6 +34,7 @@ au BufRead,BufNewFile *.htmlf setfiletype xhtml
 au BufRead,BufNewFile *.htmlf colorscheme pablo
 au BufRead,BufNewFile *.ftl setfiletype xhtml
 au BufRead,BufNewFile *.zml setfiletype xhtml
+au BufRead,BufNewFile *.conf setfiletype nginx
 
 " Set for drupal related files types
 augroup module

@@ -1,11 +1,4 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/Users/gberger/Sites/drupal/sites/all/modules/baffin_component'
-let g:netrw_dirhist_2='/Users/gberger/Sites/drupal/sites/all/modules/baffin_component/patron_component'
-let g:netrw_dirhist_3='/Users/gberger/Sites/drupal/sites/all/modules/baffin_component/patron_component/includes'
-let g:netrw_dirhist_4='/Users/gberger/Sites/drupal/sites/all/modules/patron/patronfield'
-let g:netrw_dirhist_5='/Users/gberger/Sites/drupal/sites/all/modules/patron'
-let g:netrw_dirhist_6='/Users/gberger/Sites/drupal/sites/all/modules/patron/patronfield'
-let g:netrw_dirhist_7='/Users/gberger/Work'
-let g:netrw_dirhist_8='/Users/gberger/Work/interviews'
-let g:netrw_dirhist_9='/Users/gberger/Work'
+let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_1='/Users/gberger'
+let g:netrw_dirhist_2='/Users/gberger/env'
