@@ -12,7 +12,7 @@ set gfn=Monaco\ 11
 abbr for() for (var i = 0; i < len; i++) {<CR>}<Esc>O<Space><Space>
 
 " tab related
-map <C-t> :tabnew<CR>
+map <C-t> :tabe .<CR>
 map <C-q> :tabclose<CR>
 map <C-p> :tabprevious<CR>
 map <C-n> :tabnext<CR>

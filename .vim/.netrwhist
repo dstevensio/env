@@ -1,4 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/Users/gberger'
-let g:netrw_dirhist_2='/Users/gberger/env'
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/Users/gberger/zeta/zeta-platform/zeta-web/src/main/frontend'
+let g:netrw_dirhist_2='/Users/gberger/zeta/zeta-platform/zeta-web/src/main/frontend/zappos.com'
+let g:netrw_dirhist_3='/Users/gberger/zeta/zeta-platform/zeta-web/src/main/frontend/zappos.com/product'
+let g:netrw_dirhist_4='/Users/gberger/zeta/zeta-platform/zeta-web/src/main/frontend/zappos.com'
+let g:netrw_dirhist_5='/Users/gberger/zeta/zeta-platform/zeta-web/src/main/frontend'
+let g:netrw_dirhist_6='/Users/gberger/zeta/zeta-platform/zeta-web/src/main/frontend/rebar'
+let g:netrw_dirhist_7='/Users/gberger/zeta/zeta-platform/zeta-web/src/main/frontend/rebar/macros'
+let g:netrw_dirhist_8='/Users/gberger/zeta/zeta-platform/zeta-web/src/main/frontend/rebar/macros/z'
