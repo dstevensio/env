@@ -1,22 +1,31 @@
 #!/bin/bash
 
-URL=http://build.chromium.org/f/chromium/continuous/mac/LATEST/
+URL="http://build.chromium.org/f/chromium/snapshots/chromium-rel-mac/"
 DEST=~/Applications
 CHROME=chrome-mac
 FILE=chrome-mac.zip
 ENABLE_MESSAGE=false
 
 function fetch_chrome() {
-  curl -O $URL$FILE
+  if [ -f NEW_REVISION ]; then
+    rm NEW_REVISION
+  fi
+
+  if [ -f LATEST ]; then
+    rm LATEST
+  fi
+
+  curl "${URL}LATEST">>LATEST
+  LATEST=`cat LATEST`
+
+  curl -O "${URL}${LATEST}/${FILE}"
   unzip $FILE
   rm $FILE
 
   cd $CHROME
-  curl -O "${URL}REVISION">>REVISION
-  REVISION=`cat REVISION`
 
   echo ""
-  echo "* Chromium has been updated to revision $REVISION."
+  echo "* Chromium has been updated to revision $LATEST."
 }
 
 if [ ! -d $DEST ]; then
@@ -26,9 +35,8 @@ fi
 cd $DEST
 
 if [ -d $DEST/$CHROME ]; then
-  cd $CHROME
-  REVISION=`cat REVISION`
-  curl "${URL}REVISION">>NEW_REVISION
+  REVISION=`cat LATEST`
+  curl "${URL}LATEST">>NEW_REVISION
   NEW_REVISION=`cat NEW_REVISION`
 
   if [ $REVISION = $NEW_REVISION ]; then
@@ -37,7 +45,6 @@ if [ -d $DEST/$CHROME ]; then
     exit
   fi
 
-  cd ..
   echo "* Deleting previous version of Chromium: $REVISION."
   rm -rf $CHROME
   echo "* Fetching latest version of Chromium: $NEW_REVISION."

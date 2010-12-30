@@ -36,6 +36,9 @@ au BufRead,BufNewFile *.ftl setfiletype xhtml
 au BufRead,BufNewFile *.zml setfiletype xhtml
 au BufRead,BufNewFile *.conf setfiletype nginx
 
+" Syntax highlighting for Go
+au BufRead,BufNewFile *.go set filetype=go
+
 " Set for drupal related files types
 augroup module
   autocmd BufRead *.module set filetype=php
