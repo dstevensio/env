@@ -60,6 +60,7 @@ alias nginx_zappos='sudo /Applications/MacVim.app/Contents/MacOS/Vim -g ~/conf/n
 alias nginx_6pm='sudo /Applications/MacVim.app/Contents/MacOS/Vim -g ~/conf/nginx/sites/zappos.conf'
 alias nginx_bounce='nginx restart'
 alias nginx_logs='tail -f /usr/local/nginx/logs/error.log'
+alias nginx_rm_pid_file='sudo rm /usr/local/nginx/logs/nginx.pid'
 
 ##################################
 # CouchDB Related
