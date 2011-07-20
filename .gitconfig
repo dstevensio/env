@@ -6,8 +6,8 @@
   ba = branch -a
   com = checkout master
 [user]
-  name = Geoff Berger
-  email = gberger@zappos.com
+	name = Geoff Berger
+	email = geoffberger@gmail.com
 [color]
   diff = auto
   status = auto

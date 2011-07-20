@@ -14,7 +14,7 @@ remote_filepath="/mnt/lfdb/${sql_dump}"
 # Local variables
 mysql_path="/usr/local/mysql/bin/mysql"
 db_user="root"
-db_password="19GdB*82"
+db_password="notmypassword"
 
 function init_check {
   # Check to see if a database has been passed in
@@ -39,7 +39,7 @@ function fetch_dump {
 function mysql_setup {
   # Log into mysql and source that sucker
   echo "* Preparing mysql to source the SQL Dump"
-  $mysql_path -u$db_user -p$db_password << eof
+  $mysql_path --max_allowed_packet=100M -u$db_user -p$db_password << eof
 set global max_allowed_packet=1000000000;
 set global net_buffer_length=1000000;
 create database if not exists $database;
