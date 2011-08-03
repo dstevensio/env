@@ -36,6 +36,7 @@ au BufRead,BufNewFile *.htmlf colorscheme pablo
 au BufRead,BufNewFile *.ftl setfiletype xhtml
 au BufRead,BufNewFile *.zml setfiletype xhtml
 au BufRead,BufNewFile *.conf setfiletype nginx
+au BufRead,BufNewFile *.css setfiletype css3
 
 " Syntax highlighting for Go
 au BufRead,BufNewFile *.go set filetype=go
@@ -82,13 +83,7 @@ set hlsearch
 " allows full line wrap
 set wrap
 
-"inoremap        (  ()<Left>
-"inoremap <expr> )  strpart(getline('.'), col('.')-1, 1) == ")" ? "\<Right>" : ")"
-
-"inoremap {      {}<Left>
-"inoremap {<CR>  {<CR>}<Esc>O
-"inoremap {{     {
-"inoremap {}     {}
+imap ,/ </<C-X><C-O>
 
 inoremap <% <%  %><Esc>i
 autocmd Syntax ruby,erb inoremap < <lt>><Esc>i| inoremap > <c-r>=ClosePair('>')<CR>
