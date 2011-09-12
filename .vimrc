@@ -36,7 +36,10 @@ au BufRead,BufNewFile *.htmlf colorscheme pablo
 au BufRead,BufNewFile *.ftl setfiletype xhtml
 au BufRead,BufNewFile *.zml setfiletype xhtml
 au BufRead,BufNewFile *.conf setfiletype nginx
-au BufRead,BufNewFile *.css setfiletype css3
+au BufRead,BufNewFile *.go set filetype=go
+augroup json
+  autocmd BufRead *.json set filetype=javascript
+augroup END
 
 " Syntax highlighting for Go
 au BufRead,BufNewFile *.go set filetype=go

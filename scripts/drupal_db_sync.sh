@@ -1,24 +1,19 @@
 #!/bin/bash
 
+source env.properties
+
 # Environment variables
 database=$1
 dump_date=`TZ=EST26EDT date +%Y-%m-%d`
 sql_dump="${database}_${dump_date}.sql"
-user=`whoami`
-local_filepath="/Users/${user}/tmp"
 
 # Remote variables
 remote_host=prelive.zappos.net
 remote_filepath="/mnt/lfdb/${sql_dump}"
 
-# Local variables
-mysql_path="/usr/local/mysql/bin/mysql"
-db_user="root"
-db_password="notmypassword"
-
 function init_check {
   # Check to see if a database has been passed in
-  if [ ! -n $database ]; then
+  if [ -z $database ]; then
     echo "* Hey stupid, specific a database in the first parameter"
     exit
   fi
