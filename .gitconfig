@@ -7,7 +7,7 @@
   com = checkout master
 [user]
 	name = Geoff Berger
-	email = geoffberger@gmail.com
+	email = gberger@zappos.com
 [color]
   diff = auto
   status = auto

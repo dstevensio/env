@@ -4,11 +4,11 @@ source env.properties
 
 # Environment variables
 database=$1
-dump_date=`TZ=EST26EDT date +%Y-%m-%d`
+dump_date=`TZ=EST36EDT date +%Y-%m-%d`
 sql_dump="${database}_${dump_date}.sql"
 
 # Remote variables
-remote_host=prelive.zappos.net
+remote_host=new-prelive.zappos.net
 remote_filepath="/mnt/lfdb/${sql_dump}"
 
 function init_check {

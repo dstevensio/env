@@ -32,6 +32,7 @@ alias drush='~/src/drush/drush'
 alias dp='cd ~/Sites/drupal'
 alias dpthemes='cd ~/Sites/drupal/sites/all/themes'
 alias dpmodules='cd ~/Sites/drupal/sites/all/modules'
+alias zap_settings='settings_file=~/Sites/drupal/sites/dev.drupal.zappos.net/settings.php; chmod 744 $settings_file; vim $settings_file;'
 
 ##################################
 # MySQL Related
