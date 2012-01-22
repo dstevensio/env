@@ -28,6 +28,9 @@ set list listchars=tab:\ \ ,trail:·
 " File types
 filetype plugin indent on
 
+" Start NERDTree by default
+autocmd vimenter * NERDTree
+
 " Syntax highlighting for nginx and general server configurations
 au BufRead,BufNewFile *.conf set filetype nginx
 " Syntax highlighting for JSON files.
