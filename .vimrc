@@ -9,7 +9,9 @@ set incsearch
 set hlsearch
 set wrap
 set gfn=Monaco\ 11
-abbr for() for (var i = 0; i < len; i++) {<CR>}<Esc>O<Space><Space>
+
+" install pathogen
+call pathogen#infect()
 
 " tab related
 map <C-t> :tabe .<CR>
