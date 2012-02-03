@@ -33,23 +33,25 @@ filetype plugin indent on
 autocmd InsertLeave * set nocursorline
 autocmd InsertEnter * set cursorline
 
+nmap ,f :FufFileWithCurrentBufferDir<CR>
+nmap ,b :FufBuffer<CR>
+nmap ,t :FufTaggedFile<CR>
+
 "Highlight cursor
 highlight CursorLine ctermbg=8 cterm=NONE
 
-""
-" NERDTree related commands
-""
 " Start NERDTree by deafult
-autocmd vimenter * NERDTree
+" autocmd vimenter * NERDTree
 " Remap NERDTreeTabsToggle
 map <Leader>p <plug>NERDTreeTabsToggle<CR>
 
 " Syntax highlighting for nginx and general server configurations
-au BufRead,BufNewFile *.conf set filetype nginx
+au BufRead,BufNewFile *.conf set filetype=nginx
 " Syntax highlighting for JSON files.
 au BufRead,BufNewFile *.json set filetype=javascript
 " Syntax highlighting for Go
 au BufRead,BufNewFile *.go set filetype=go
+
 
 " Set for drupal related files types
 augroup module
