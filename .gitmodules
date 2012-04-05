@@ -28,3 +28,6 @@
 [submodule ".vim/bundle/fuzzyfinder_textmate"]
 	path = .vim/bundle/fuzzyfinder_textmate
 	url = https://github.com/jamis/fuzzyfinder_textmate.git
+[submodule ".vim/bundle/javascript"]
+	path = .vim/bundle/javascript
+	url = https://github.com/serverhorror/javascript.vim.git
