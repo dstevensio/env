@@ -1,5 +1,4 @@
 " my additions
-source ~/.vim/syntax/ftl.vim
 autocmd FileType php,js,html,java,c,cpp,chh,h,cc,ruby,erb :set cindent
 set incsearch
 set hlsearch
@@ -49,9 +48,13 @@ map <Leader>p <plug>NERDTreeTabsToggle<CR>
 au BufRead,BufNewFile *.conf set filetype=nginx
 " Syntax highlighting for JSON files.
 au BufRead,BufNewFile *.json set filetype=javascript
+" Syntax highlighting for jquery
+au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
 " Syntax highlighting for Go
 au BufRead,BufNewFile *.go set filetype=go
-
+" Syntax highlighting for freemarker
+au BufRead,BufNewFile *.ftl set filetype=ftl
+au BufRead,BufNewFile *.zml set filetype=ftl
 
 " Set for drupal related files types
 augroup module
@@ -70,6 +73,10 @@ augroup info
   autocmd BufRead *.info set filetype=php
 augroup END
 
+" protobuf syntax
+augroup filetype
+  au! BufRead,BufNewFile *.proto setfiletype proto
+augroup end
 " turn syntax highlighting on by default
 syntax on
 
