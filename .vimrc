@@ -56,6 +56,8 @@ au BufRead,BufNewFile *.go set filetype=go
 au BufRead,BufNewFile *.ftl set filetype=ftl
 au BufRead,BufNewFile *.zml set filetype=ftl
 
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+
 " Set for drupal related files types
 augroup module
   autocmd BufRead *.module set filetype=php
