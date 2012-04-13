@@ -11,7 +11,7 @@ source ~/scripts/git-completion.bash
 alias l='ls -l'
 alias ll='ls -la'
 alias lll='ls -asl | more'
-alias gvim='/Applications/MacVim.app/Contents/MacOS/Vim -g'
+alias gvim='~/scripts/mvim'
 alias sgvim='sudo /Applications/MacVim.app/Contents/MacOS/Vim -g'
 alias rmsvn='find . -name .svn -print0 | xargs -0 rm -rf'
 alias myipbitch='ipconfig getifaddr en0'
