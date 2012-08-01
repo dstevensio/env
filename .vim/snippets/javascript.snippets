@@ -5,13 +5,18 @@ snippet proto
 		${4:// body...}
 	};
 # Function
-snippet fun
+snippet fn
 	function ${1:function_name} (${2:argument}) {
 		${3:// body...}
 	}
 # Anonymous Function
 snippet f
 	function(${1}) {${2}};
+# Immediately-Invoked Function Expression
+snippet iife
+	(function() {
+		${1}
+	}());
 # if
 snippet if
 	if (${1:true}) {${2}};
@@ -72,3 +77,6 @@ snippet get
 # Get Element
 snippet gett
 	getElementBy${1:Id}('${2}')${3}
+# console.log
+snippet cl
+	console.log(${1});

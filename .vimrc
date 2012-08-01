@@ -55,7 +55,11 @@ au BufRead,BufNewFile *.go set filetype=go
 " Syntax highlighting for freemarker
 au BufRead,BufNewFile *.ftl set filetype=ftl
 au BufRead,BufNewFile *.zml set filetype=ftl
-
+" Syntax highlighting for markdown
+au BufRead,BufNewFile *.md set filetype=markdown
+" Syntax highlighting for less css
+au BufNewFile,BufRead *.less set filetype=less
+" Autocomplete for JavaScript
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 
 " Set for drupal related files types
